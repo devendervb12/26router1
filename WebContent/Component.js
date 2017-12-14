@@ -4,26 +4,29 @@ sap.ui.core.UIComponent.extend("smax.batch26.Component", {
 		rootView : "smax.batch26.view.App",
 		routing : {
 			config : {
-				routerClass : "sap.m.routing.Router",				
+				routerClass : "sap.m.routing.Router",
+				controlId : "idApp",
+				controlAggregation : "pages",
+				viewType : "XML",
+				viewPath : "smax.batch26.view"
 			},
 			routes : [
 				{
-					pattern : "",
-					name : "n1",
-					viewName : "smax.batch26.view.Page2",
-					viewType : "XML",
-					controlAggregation : "pages",
-					controlId : "idApp"
+					pattern : "", 
+					name : "p1",
+					viewName : "Page1"
+				},
+				{
+					pattern : "pp2",
+					name : "p2",
+					viewName : "Page2"
 				}
 			]
-		}
-		
+		}		
 	},	
-	init : function(){
-		
+	init : function(){		
 		// initialize with parent properties
-		sap.ui.core.UIComponent.prototype.init.apply(this);
-		
+		sap.ui.core.UIComponent.prototype.init.apply(this);		
 		this.getRouter().initialize();
 	}
 	
