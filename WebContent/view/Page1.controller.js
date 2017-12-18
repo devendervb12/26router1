@@ -1,12 +1,17 @@
 sap.ui.controller("smax.batch26.view.Page1", {
 
 	
-	gotoPage2 : function(){
-		// goto page2
+	onItemSelection : function(oEvent){
+	
 		var oRouter = this.getOwnerComponent().getRouter();
 		
-		oRouter.navTo("p2");
+		// get selected productID
+		debugger;
 		
+		
+		var prodId = oEvent.getSource().getTitle();
+		
+		oRouter.navTo("p2", {pid : prodId});
 		
 	}
 

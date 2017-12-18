@@ -2,7 +2,11 @@
 		controllerName="smax.batch26.view.Page2" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Page2">
 		<content>
+		<VBox>
+		     <Text text="{ProductID}"/>
+		     <Text text="{Name}"/> 
 	         <Button text="Goto Page1"/>
+	    </VBox>     
 		</content>
 	</Page>
 </core:View>
